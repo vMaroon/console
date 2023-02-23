@@ -642,16 +642,16 @@ function AppSidebar(props: { routes: (IRoute | IRouteGroup)[] }) {
                                     key={route.title}
                                     title={route.title}
                                     isExpanded
-                                    isActive={!!route.routes.find((route) => location.pathname === route.route)}
+                                    isActive={!!route.routes.find((route) => location.pathname.startsWith(route.route))}
                                 >
                                     {route.routes.map((route) => (
-                                        <NavItem key={route.route} isActive={location.pathname.includes(route.route)}>
+                                        <NavItem key={route.route} isActive={location.pathname.startsWith(route.route)}>
                                             <Link to={route.route}>{route.title}</Link>
                                         </NavItem>
                                     ))}
                                 </NavExpandable>
                             ) : (
-                                <NavItem key={route.route} isActive={location.pathname.includes(route.route)}>
+                                <NavItem key={route.route} isActive={location.pathname.startsWith(route.route)}>
                                     <Link to={route.route}>{route.title}</Link>
                                 </NavItem>
                             )
