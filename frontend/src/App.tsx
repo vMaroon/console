@@ -334,12 +334,6 @@ export default function App() {
                         route: NavigationPath.overview,
                         component: OverviewPage,
                     },
-                    {
-                        title: 'Search',
-                        type: 'route',
-                        route: NavigationPath.search,
-                        component: Search,
-                    },
                 ],
             },
             {
@@ -351,12 +345,6 @@ export default function App() {
                         type: 'route',
                         route: NavigationPath.clusters,
                         component: Clusters,
-                    },
-                    {
-                        title: 'Bare metal assets',
-                        type: 'route',
-                        route: NavigationPath.bareMetalAssets,
-                        component: BareMetalAssets,
                     },
                     {
                         title: 'Automation',
@@ -377,20 +365,7 @@ export default function App() {
                 type: 'route',
                 route: NavigationPath.applications,
                 component: Applications,
-            },
-            {
-                title: 'Governance',
-                type: 'route',
-                route: NavigationPath.governance,
-                component: Governance,
-            },
-
-            {
-                title: 'Credentials',
-                type: 'route',
-                route: NavigationPath.credentials,
-                component: Credentials,
-            },
+            }
         ],
         []
     )

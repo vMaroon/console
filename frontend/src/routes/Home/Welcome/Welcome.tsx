@@ -38,13 +38,6 @@ export default function WelcomePage() {
                 link: NavigationPath.applications,
             },
             {
-                icon: <GovernanceIcon />,
-                title: 'Governance',
-                description:
-                    'Use policies to automatically configure and maintain consistency of security controls required by industry or other corporate standards. Prevent unintentional or malicious configuration drift that might expose unwanted and unnecessary threat vectors.',
-                link: NavigationPath.governance,
-            },
-            {
                 icon: <NetworkingIcon />,
                 title: 'Multicluster networking',
                 description:
@@ -61,11 +54,6 @@ export default function WelcomePage() {
                 title: 'Kubernetes',
                 description:
                     'Easily provision Kubernetes clusters and offer complete cluster lifecycle management in a single console.',
-            },
-            {
-                title: 'Policies',
-                description:
-                    'Enforce policies at the target clusters using Kubernetes-supported custom resource definitions.',
             },
             {
                 title: 'Cluster landscape',
@@ -118,7 +106,7 @@ export default function WelcomePage() {
         <Page>
             <PageSection
                 variant="darker"
-                style={{ backgroundColor: '#333', backgroundImage: 'linear-gradient(to right, #333, #111)' }}
+                style={{ backgroundColor: '#7B669E', backgroundImage: 'linear-gradient(to right, #7B669E, #111)' }}
             >
                 <div style={{ display: 'flex', gap: 64 }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 16, padding: 32 }}>
