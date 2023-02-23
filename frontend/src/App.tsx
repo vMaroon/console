@@ -574,7 +574,6 @@ function AppHeader() {
 function AppSidebar(props: { routes: (IRoute | IRouteGroup)[] }) {
     const { routes } = props
     const location = useLocation()
-    console.log(location.pathname);
     const [open, setOpen] = useState(false)
     const classes = useStyles()
     const dropdownItems = [
