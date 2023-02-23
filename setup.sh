@@ -32,7 +32,7 @@ SA_SECRET=$(oc get serviceaccounts -n $INSTALLATION_NAMESPACE --selector=app=con
 SA_TOKEN=`oc get secret -n $INSTALLATION_NAMESPACE ${SA_SECRET} -o="jsonpath={.data.token}"`
 
 echo ${SA_TOKEN} > /tmp/tmp_SA_TOKEN
-SA_TOKEN=`cat /tmp/tmp_SA_TOKEN | base64 -d -`
+SA_TOKEN=`base64 -i /tmp/tmp_SA_TOKEN -d`
 rm /tmp/tmp_SA_TOKEN
 echo TOKEN=$SA_TOKEN >> ./backend/.env
 

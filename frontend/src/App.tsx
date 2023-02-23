@@ -574,6 +574,7 @@ function AppHeader() {
 function AppSidebar(props: { routes: (IRoute | IRouteGroup)[] }) {
     const { routes } = props
     const location = useLocation()
+    console.log(location.pathname);
     const [open, setOpen] = useState(false)
     const classes = useStyles()
     const dropdownItems = [
@@ -645,13 +646,13 @@ function AppSidebar(props: { routes: (IRoute | IRouteGroup)[] }) {
                                     isActive={!!route.routes.find((route) => location.pathname === route.route)}
                                 >
                                     {route.routes.map((route) => (
-                                        <NavItem key={route.route} isActive={location.pathname === route.route}>
+                                        <NavItem key={route.route} isActive={location.pathname.includes(route.route)}>
                                             <Link to={route.route}>{route.title}</Link>
                                         </NavItem>
                                     ))}
                                 </NavExpandable>
                             ) : (
-                                <NavItem key={route.route} isActive={location.pathname === route.route}>
+                                <NavItem key={route.route} isActive={location.pathname.includes(route.route)}>
                                     <Link to={route.route}>{route.title}</Link>
                                 </NavItem>
                             )
